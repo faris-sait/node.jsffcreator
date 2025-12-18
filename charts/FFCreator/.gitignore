@@ -42,9 +42,11 @@ build/docs/
 source/build/
 static/
 examples/cache
-examples/output
 
 # testing
 coverage/**
 dwt*
-yarn.lock
+
+# Allow output videos for demo
+!examples/output/*.mp4
+!nodejs-app/output/*.mp4
