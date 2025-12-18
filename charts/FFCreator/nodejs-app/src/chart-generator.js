@@ -9,7 +9,7 @@ const path = require('path');
 const fs = require('fs');
 const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 const ffprobePath = require('ffprobe-installer').path;
-const { FFText, FFChart, FFScene, FFCreator } = require('../../');
+const { FFText, FFChart, FFScene, FFCreator, FFAudio } = require('../../');
 const { chartTemplates, backgrounds } = require('./chart-templates');
 
 // Set FFmpeg paths
@@ -23,6 +23,7 @@ class ChartGenerator {
     this.fps = options.fps || 30;
     this.outputDir = options.outputDir || path.join(__dirname, '../output');
     this.cacheDir = options.cacheDir || path.join(__dirname, '../cache');
+    this.audioPath = options.audio || null; // Path to background music file
     
     // Ensure directories exist
     if (!fs.existsSync(this.outputDir)) fs.mkdirSync(this.outputDir, { recursive: true });
@@ -95,6 +96,15 @@ class ChartGenerator {
     scene.addChild(chart);
 
     creator.addChild(scene);
+    
+    // Add background audio if provided
+    if (data.audio || this.audioPath) {
+      creator.addAudio({
+        path: data.audio || this.audioPath,
+        loop: true,
+        volume: 0.5
+      });
+    }
     
     return this._render(creator, filename);
   }
@@ -224,6 +234,16 @@ class ChartGenerator {
 
     creator.addChild(outroScene);
     console.log('  ✓ Outro');
+
+    // Add background audio if provided
+    if (data.audio || this.audioPath) {
+      creator.addAudio({
+        path: data.audio || this.audioPath,
+        loop: true,
+        volume: 0.5
+      });
+      console.log('  ✓ Audio added');
+    }
 
     return this._render(creator, 'all-charts.mp4');
   }
