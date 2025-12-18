@@ -1,0 +1,20 @@
+{
+  "name": "ffcreator-chart-visualizer",
+  "version": "1.0.0",
+  "description": "Node.js application for creating data visualization videos using FFCreator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "bar": "node index.js --chart bar",
+    "line": "node index.js --chart line",
+    "pie": "node index.js --chart pie",
+    "area": "node index.js --chart area",
+    "radar": "node index.js --chart radar",
+    "scatter": "node index.js --chart scatter",
+    "all": "node index.js --chart all",
+    "custom": "node index.js --custom"
+  },
+  "keywords": ["ffcreator", "charts", "video", "data-visualization"],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,75 @@
+{
+  "type": "showcase",
+  "introTitle": "📊 Sales Analytics 2025",
+  "introSubtitle": "Quarterly Performance Report",
+  "outroTitle": "✨ Thank You",
+  "outroSubtitle": "Generated with FFCreator",
+  
+  "bar": {
+    "title": "Monthly Revenue",
+    "subtitle": "Q4 2025 Performance",
+    "labels": ["Oct", "Nov", "Dec"],
+    "values": [45000, 52000, 68000],
+    "color": "#00d4ff",
+    "colorEnd": "#0066ff"
+  },
+  
+  "line": {
+    "title": "User Growth",
+    "subtitle": "Daily Active Users",
+    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "series": [
+      { "name": "This Week", "values": [1200, 1400, 1350, 1600, 1800, 2100, 1950], "color": "#00ff88" },
+      { "name": "Last Week", "values": [1000, 1150, 1100, 1300, 1500, 1700, 1600], "color": "#ffd93d" }
+    ]
+  },
+  
+  "pie": {
+    "title": "Revenue by Product",
+    "subtitle": "Product Category Distribution",
+    "items": [
+      { "value": 40, "name": "Software", "itemStyle": { "color": "#5470C6" } },
+      { "value": 30, "name": "Services", "itemStyle": { "color": "#91CC75" } },
+      { "value": 20, "name": "Hardware", "itemStyle": { "color": "#FAC858" } },
+      { "value": 10, "name": "Other", "itemStyle": { "color": "#EE6666" } }
+    ]
+  },
+  
+  "area": {
+    "title": "Server Metrics",
+    "subtitle": "24-Hour Resource Usage",
+    "labels": ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00", "24:00"],
+    "max": 100,
+    "series": [
+      { "name": "CPU", "values": [20, 35, 55, 70, 65, 45, 25], "color": "#5470C6" },
+      { "name": "Memory", "values": [30, 40, 50, 60, 65, 55, 40], "color": "#91CC75" }
+    ]
+  },
+  
+  "radar": {
+    "title": "Team Performance",
+    "subtitle": "Q4 Evaluation Metrics",
+    "indicators": [
+      { "name": "Speed", "max": 100 },
+      { "name": "Quality", "max": 100 },
+      { "name": "Communication", "max": 100 },
+      { "name": "Innovation", "max": 100 },
+      { "name": "Teamwork", "max": 100 }
+    ],
+    "series": [
+      { "name": "Team Alpha", "values": [90, 85, 88, 92, 95], "color": "#00d4ff" },
+      { "name": "Team Beta", "values": [80, 90, 85, 78, 88], "color": "#ff6b6b" }
+    ]
+  },
+  
+  "scatter": {
+    "title": "Price vs Sales",
+    "subtitle": "Product Analysis",
+    "xAxisName": "Price ($)",
+    "yAxisName": "Units Sold",
+    "series": [
+      { "name": "Electronics", "points": [[50, 800], [100, 600], [150, 450], [200, 300]], "color": "#91CC75" },
+      { "name": "Clothing", "points": [[30, 1200], [50, 900], [80, 600], [100, 400]], "color": "#FAC858" }
+    ]
+  }
+}
